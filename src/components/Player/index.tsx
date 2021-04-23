@@ -126,7 +126,7 @@ export function Player() {
         <button 
           type="button" 
           disabled={!episode || episodeList.length===1}
-          onClick={toggleShuffle}
+          onClick={() => toggleShuffle()}
           className={isShuffling ? styles.isActive : ''}
         >
           <img src="/shuffle.svg" alt="Embaralhar"  />
@@ -151,7 +151,7 @@ export function Player() {
         <button 
            type="button"
            disabled={!episode} 
-           onClick={toggleLoop}
+           onClick={() => toggleLoop()}
            className={isLooping ? styles.isActive : ''}
         >
           <img src="/repeat.svg" alt="Repetir"  />
